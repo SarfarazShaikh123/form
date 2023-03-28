@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+
+    <!-- css code is start from here  -->
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.container{
+    background-color: rgb(99, 91, 91);
+    max-width: 100%;
+    padding: 34px;
+    margin: auto;
+   
+
+}
+
+input, textarea{
+    display: block;
+    border: 2px solid black;
+    border-radius: 6px;
+    outline: none;
+    width: 40%;
+    margin: 11px auto;
+    padding: 7px;
+    font-size: 16px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#btn{
+   color: white;
+    background-color: black;
+    border: 2px solid rgb(213, 209, 209);
+    border-radius: 6px;
+    padding: 7px 7px ;
+    cursor: pointer;
+
+}
+#btn:hover{
+    color: red;
+}
+
+#file:hover{
+    color: red;
+}
+
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+<!-- HTML code is start from here  -->
+    <div class="container">
+        <form onsubmit="callValue()">
+            <select id="Title">
+                <option value="mr" >Mr</option>
+                <option value="ms">ms</option>
+                <option value="mrs">Mrs</option>
+            </select>
+            <input type="text" name="name" id="Fistname" required placeholder=" Fist name ">
+            <input type="text" name="lastname" id="lastname" required  placeholder="Last name">
+            <input type="date" name="date" id="date" required placeholder="Enter Date of birth">
+            <input type="tel" name="tel" id="tel"  required placeholder="Enter Phone Number">
+            <input type="email" name="email" id="email" required placeholder="Enter Email Id ">
+            <textarea name="info" id="info" cols="30" rows="10" maxlength="300" required placeholder="Message "></textarea>
+            <input type="file" name="file" id="file" accept=".pdf, .image format">
+            <button id="btn">submit</button>
+
+
+        </form>
+    </div>
+
+
+
+
+
+    <!-- javascript code is start from here  -->
+    <script>
+        // function to store the user Data on the page 
+function callValue(){
+ var title= document.getElementById("Title").value;
+ var Firstname= document.getElementById("Fistname").value;
+  var lastname=document.getElementById("lastname").value;
+  var tel=document.getElementById("tel").value;
+ var email= document.getElementById("email").value;
+ var info= document.getElementById("info").value;
+ var file= document.getElementById("file").value;
+ document.write("Thank You ");
+ document.write("[");
+
+ document.write(title);
+ document.write(Firstname);
+ document.write(lastname);
+ document.write("]");
+
+ document.write("<br>");
+ document.write("you have submitted following detail ");
+ document.write("<br>");
+ document.write("Your Mobile No is :",  tel);
+ document.write("<br>");
+ document.write("Your Email Id is :", email);
+ document.write("<br>");
+ document.write("You Other information is :", info);
+ document.write("<br>");
+ document.write("your file is :", file);
+
+}
+
+
+
+    </script>
+
+
+</body>
+
+</html>
